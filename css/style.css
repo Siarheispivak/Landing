@@ -1,0 +1,195 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: "Corporate-A-Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Corporate-A-Bold.woff2") format("woff2"), url("../fonts/Corporate-A-Bold.woff") format("woff");
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    background: #070a1b;
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 400;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+}
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.header__logo {
+    margin-left: 115px;
+}
+.list {
+    display: flex;
+}
+.list__item + .list__item {
+    margin-left: 30px;
+}
+.list__link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+.list__link:hover {
+    background-color: #c1a1d2;
+}
+.header__content {
+    background-image: url(../images/header-bg.png);
+    min-height: calc(100vh - 100px);
+    background-repeat: no-repeat;
+    background-position: center; /* //это для того чтоб,если монитор маленький и вся кртинка не помещаеться,чтоб показывалось центровое изображение! */
+    background-size: cover; /* а это,для того,чтоб если по местам там где-то,что-то будет не хватать,чтоб оно растянулось! */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+.header__content::before {
+    content: "";
+    background-image: url(../images/decor.svg);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+}
+.title {
+    font-family: "Corporate-A-Bold";
+    margin-bottom: 5px;
+    font-size: 72px;
+    line-height: 120%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.title-descr {
+    font-size: 24px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+}
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+.concept {
+    padding-top: 150px;
+    margin-bottom: 150px;
+}
+.concept__inner {
+    max-width: 900px;
+    margin-left: auto;
+}
+
+.section__title {
+    margin-bottom: 25px;
+    text-transform: uppercase; /* Это мы написали для того чтоб было написано большими буквами */
+    font-size: 18px;
+    color: #f402a2;
+    font-family: "Corporate-A-Bold";
+}
+.concept__text {
+    font-size: 24px;
+    margin-bottom: 25px;
+    line-height: 120%;
+}
+.premier {
+    margin-bottom: 150px;
+}
+.premier__inner {
+    display: flex;
+    gap: 60px;
+}
+.premier__text {
+    margin-bottom: 21px;
+}
+.premier__img {
+    margin-bottom: 20px;
+}
+.premier__btn {
+    font-family: "Corporate-A-Bold";
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 120%;
+    color: #f402a2;
+    text-align: center;
+    padding: 14px;
+    border: 1px solid #f402a2;
+}
+.premier__btn:hover {
+    color: #53a1cb;
+    border: 1px solid #53a1cb;
+}
+.video {
+    margin-bottom: 150px;
+}
+.video__img {
+    margin-bottom: 25px;
+}
+.video__btn {
+    font-family: "Corporate-A-Bold";
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 120%;
+    color: #f402a2;
+    padding: 14px;
+    border: 1px solid #f402a2;
+    transition: all 0.3s;
+}
+.video__btn span {
+    padding-top: 2px;
+}
+
+.video__btn:hover {
+    color: #53a1cb;
+    border: 1px solid #53a1cb;
+}
+.video__btn path {
+    transition: all 0.3s;
+}
+.video__btn:hover path {
+    fill: #53a1cb;
+}
