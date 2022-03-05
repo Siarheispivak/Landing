@@ -193,3 +193,6 @@ ul {
 .video__btn:hover path {
     fill: #53a1cb;
 }
+.design__interior {
+    display: grid;
+}
